@@ -6,10 +6,10 @@ We want to promote the website before the launch on Facebook, and invite users t
 
 ## Experience
 ### Facebook Add
-[fb.png]
+![fb-ads.png](fb-ads.png)
 
 ### Website
-[website.png]
+![website.png](website.png)
 
 ---
 ## Results
