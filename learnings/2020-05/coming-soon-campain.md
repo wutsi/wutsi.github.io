@@ -6,9 +6,12 @@ We want to promote the website before the launch on Facebook, and invite users t
 
 ## Experience
 ### Facebook Add
+[fb.png]
 
 ### Website
+[website.png]
 
+---
 ## Results
 
 ## Observations
