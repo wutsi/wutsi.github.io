@@ -4,6 +4,8 @@
 
 We want to promote the website before the launch on Facebook, and invite users to subscribe to the mailing list.
 
+Objective: get 100 emails in 30d
+
 ## Experience
 | Facebook      | Website     |
 | ------------- |-------------|
