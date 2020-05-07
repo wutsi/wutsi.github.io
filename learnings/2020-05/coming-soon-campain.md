@@ -7,7 +7,7 @@ We want to promote the website before the launch on Facebook, and invite users t
 ## Experience
 | Facebook      | Website     |
 | ------------- |-------------|
-| ![fb-ads.png](fb-ads.png=200px)| ![website.png](website.png=200px)|
+| ![fb-ads.png](fb-ads.png)| ![website.png](website.png)|
 
 ---
 ## Results (May 7, 2020)
