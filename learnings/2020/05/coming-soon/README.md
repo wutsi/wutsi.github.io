@@ -27,3 +27,4 @@ We want to promote the website before the launch on Facebook, and invite users t
 ## Next Steps
 - Launch the site with the current articles available.
 - Enable Google One-Tap to get users signin
+- Find a strategy to get more fans to FB page
