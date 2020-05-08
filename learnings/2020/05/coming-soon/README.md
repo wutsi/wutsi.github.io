@@ -11,17 +11,19 @@ We want to promote the website before the launch on Facebook, and invite users t
 | ------------- |-------------|
 | ![fb-ads.png](fb-ads.png)| ![website.png](website.png)|
 
----
-## Results (May 7, 2020)
-| KPI | Value|
-| ----|------|
-| Duration of Test | 8d |
-| Clicks | 102.3K |
-| Total Spent | 777 |
-| **Mailing List** | **11** |
 
-## Observations
+## Results (May 9, 2020)
+- Duration of test: 9d
+- Click Trough Rate: 0.47% (151K impression, 713 clicks)
+- Conversion Rate: 1.15% (713 visitors, 11 emails)
+- Email Aquisition Cost: 3.33$ (Total spent=36.53$)
+- Number of Facebook Fans: 0
+
 
 ## Learnings
+- Hard to get emails via an subcribe form in website
+
 
 ## Next Steps
+- Launch the site with the current articles available.
+- Enable Google One-Tap to get users signin
