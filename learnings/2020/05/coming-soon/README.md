@@ -14,10 +14,15 @@ We want to promote the website before the launch on Facebook, and invite users t
 
 ## Results (May 9, 2020)
 - Duration of test: 9d
-- Click Trough Rate: **0.47%** (151K impression, 713 clicks)
-- Conversion Rate: **1.15%** (713 visitors, 11 emails)
-- Email Aquisition Cost: **3.33$** (Total spent=36.53$)
-- Number of Facebook Fans: 0
+- Impressions: 114.5K
+- Clicks: 871
+- Emails: 11
+- Click Trough Rate: **0.76%**
+- Email Conversion Rate: **1.26%**
+- Total Spent: **43.99$**
+- Cost per Click: **0.05$** (Total spent=43.99$)
+- Email Aquisition Cost: **3.99$** (Total spent=43.99$)
+- Number of Facebook Fans: 1
 
 
 ## Learnings
