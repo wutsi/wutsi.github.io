@@ -1,0 +1,6 @@
+# Tracking File
+All user tracking events are collected on the server, and persisted on CSV file having the following format
+
+| Column | Description |
+|--------|-------------|
+|time | date/time in millisecond when the event was occured |
