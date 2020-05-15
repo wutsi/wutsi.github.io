@@ -7,3 +7,8 @@ All user tracking events are collected on the server, and persisted on CSV file 
 | time | date/time in millisecond when the event was occured |
 | hitid | unique ID assigned to each visit on a page |
 | deviceid | unique ID that represent the device (phone, browser) of the visitor |
+
+| Command | Description |
+| --- | --- |
+| git status | List all new or modified files |
+| git diff | Show file differences that haven't been staged |
