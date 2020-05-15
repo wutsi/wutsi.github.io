@@ -3,7 +3,7 @@ All user tracking events are collected on the server, and persisted on CSV file 
 
 
 | Column | Description |
-| --- | --- |
+| ------ | ----------- |
 | time | date/time in millisecond when the event was occured |
 | hitid | unique ID assigned to each visit on a page |
 | deviceid | unique ID that represent the device (phone, browser) of the visitor |
