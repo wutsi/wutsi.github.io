@@ -17,7 +17,7 @@ Campain to promote a story via Facebook
 - Clicks: 206
 - Number of FB Fans: 11
 
-- Campain Costs: $...
+- Campain Costs: **$15**
 - Cost Per Click: **$0.08**
 - CTR: **0.9%**
 - Subscription CVR: **0.0%**
