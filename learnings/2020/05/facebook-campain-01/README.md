@@ -47,8 +47,8 @@ Although the percentage are impressive, the absolute number are relativelly low 
 - No share in the reader
 - 1 share in Facebook
  
-### 4. No user interacted with Google One-Tap popup to login
-- No login via Google One-Tap popup
+### 4. No user logged in while reading the story
+- No login via Google One-Tap popup that show up in the story reader
 
 # Oportunities
 - When user finish reading an article, recommend him what to read next.
