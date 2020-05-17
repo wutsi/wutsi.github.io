@@ -25,9 +25,9 @@ Campain to promote a story via Facebook
 
 # Learnings
 ### 1. Most users quit the site after reading the article. 
-**96%** drop off from the site after reading the article. We see similar pattern in other pages
 ![](funnel.png)
-We should recommend to user what to read next, instead of expecting them to go back to homepage to search for next article.
+- **96%** drop off from the site after reading the article. 
+- When looking at other story pages, we see similar pattern.
 
 ### 2. Facebook Campain effective, but very costly!
 | Traffic | Story Stats |
@@ -51,5 +51,6 @@ Although the percentage are impressive, the absolute number are relativelly low 
 - No login via Google One-Tap popup that show up in the story reader
 
 # Oportunities
-- When user finish reading an article, recommend him what to read next.
+- We should recommend to reader what to read next, after they completed reading an article.
+- Next test, run a campain Twitter vs Facebook to see which one performs best.
 - Force user to login before reading articles, so that we can collect their email to send them article via email
