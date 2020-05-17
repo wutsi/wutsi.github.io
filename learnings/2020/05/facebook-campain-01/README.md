@@ -34,7 +34,7 @@ We should recommend to user what to read next, instead of expecting them to go b
 |---------|-------------|
 | ![](traffic.png) | ![](stats.png) |
 
-- Significant traffic increase after the Facebook campaign was launched
+- Significant traffic increase on the site after the Facebook campaign was launched
 - Views by **400%** (from 5 daily views to 21 in average) after May 11, 2020.
 - Facebook fans increased by **500%** from 2 to 11. **IMPORTANT** To get people Likes on the page, its important to track who interact with the ads, and invite them to Like the page!
 Although the percentage are impressive, the absolute number are relativelly low - Every click costs **$0.08** 
