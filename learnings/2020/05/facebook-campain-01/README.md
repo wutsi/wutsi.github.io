@@ -37,6 +37,7 @@ We should recommend to user what to read next, instead of expecting them to go b
 - Significant traffic increase on the site after the Facebook campaign was launched
 - Views by **400%** (from 5 daily views to 21 in average) after May 11, 2020.
 - Facebook fans increased by **500%** from 2 to 11. 
+- The story promoted reaches 22K users, while other stories are reaching 3-4 users
 
 **IMPORTANT** To get people Likes on the page, its important to track who interact with the ads, and invite them to Like the page!
 
