@@ -13,13 +13,13 @@ Campain to promote a story via Facebook
 | ![](fb-ad.png) | [Story](https://www.wutsi.com/read/9) |
 
 # Results
-- Impressions: 22546
-- Clicks: 206
-- Number of FB Fans: 11
+- Impressions: 27072
+- Clicks: 259
+- Number of FB Fans: 12
 
-- Campain Costs: **$15**
-- Cost Per Click: **$0.08**
-- CTR: **0.9%**
+- Campain Costs: **$21.07**
+- Cost Per Click: **$0.07**
+- CTR: **0.95%**
 - Subscription CVR: **0.0%**
 - Fan CVR: **0.04%**
 
@@ -44,7 +44,7 @@ Campain to promote a story via Facebook
 Although the percentage are impressive, the absolute number are relativelly low - Every click costs **$0.08** 
 
 ### 3. People don't share the story
-- No share in the reader
+- No share from visitors after they read the article
 - 1 share in Facebook
  
 ### 4. No user logged in while reading the story
