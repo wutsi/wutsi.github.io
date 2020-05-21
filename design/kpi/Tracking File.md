@@ -21,7 +21,7 @@ All user tracking events are collected on the server, and persisted on CSV file 
 - **bot**: `true` if this event was fired by a bot
 - **ua**: User Agent
 
-# Event
+# Events
 Here is the list of events:
 - **readstart**: User starts reading an article. This event is fired when user enters the page `/read/...`.
 - **readend**: User stops reading an article. This event is fired when user leave the page `/read/...`.
@@ -29,6 +29,8 @@ Here is the list of events:
 - **xread**: User clicks on article recommendation after reading an article.
 - **share**: User shares and article on social media.
 - **read-all**: User select button to read articles in all languages
+- **login**: User logged in
+- **g_one_tap_show**: Google One-Tap popup opened
 
 # Traffic
 The Traffic indicate from where the user if comming from
