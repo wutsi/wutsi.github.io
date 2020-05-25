@@ -24,4 +24,4 @@ Campain to promote a story via Facebook
 - CTR: **1.14% (+0.19)**
 
 # Learnings
-See [Story](https://www.wutsi.com/read/21)
+See [Story](https://www.wutsi.com/read/31)
