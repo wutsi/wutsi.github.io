@@ -17,5 +17,8 @@ Configuration Settings:
 If `wutsi.image-kit.origin-url=https://s3.amazonaws.com/int-wutsi`, and `wutsi.image-kit.origin-url=https://ik.imagekit.io/cx8qxsgz4d/`, then the URL `https://s3.amazonaws.com/int-wutsi/1/3/foo.png` will be rewritten to  `https://ik.imagekit.io/cx8qxsgz4d/1/3/foo.png`
 
 ## Accounts
-- Integration: Email=herve.tchepannou@gmail.com
-- Production: Email=herve.tchepannou@wutsi.com
+#### Integration
+- Email: herve.tchepannou@gmail.com
+
+#### Production
+- Email: herve.tchepannou@wutsi.com
