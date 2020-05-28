@@ -1,5 +1,5 @@
 # ImageKit.io
-Wutsi is integrated with [imagekit.io](https://imagekit.io) to optimize the images served to users: 
+Wutsi is integrated with [imagekit.io](https://imagekit.io) for optimizing images served to users: 
 - Resizing on the fly images, to return smaller images to mobile users.
 - Return image in optimized format. Ex: return `.webp` instead of `.png`.
 
