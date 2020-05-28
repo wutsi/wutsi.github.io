@@ -9,7 +9,7 @@ Wutsi is integrated with [imagekit.io](https://imagekit.io) to optimize the imag
 ## Configuration
 Configuration File: [application.yml](https://github.com/WutsiTeam/wutsi-blog-service/blob/master/src/main/resources/application.yml)
 Configuration Settings:
-- `wutsi.toggles.image-kit`: Feature flag for imagekit.io
+- `wutsi.toggles.image-kit`: Feature flag to turn on/off the integration with imagekit.io
 - `wutsi.image-kit.origin-url`: Base URL served by imagekit.io
 - `wutsi.image-kit.endpoint-url`: ImageKit.io base URL
 
