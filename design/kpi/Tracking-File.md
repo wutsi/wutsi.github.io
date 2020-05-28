@@ -38,3 +38,4 @@ The Traffic indicate from where the user if comming from
 - **social_media**: User is coming from social media, by clicking a link of an article showing on Social Media.
 - **email**: User coming from email, by clicking a link of an article contained in an email.
 - **seo**: User coming from Google/Bing etc.
+- **pwainstalled**: User has installed the PWA version of the application
