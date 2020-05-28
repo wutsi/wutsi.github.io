@@ -3,4 +3,4 @@ The 2 main KPI that we are tracking are
 - **Total Views**: What are the total visits on articles.
 
 ### Sub Pages
-- [Tracking File](https://github.com/wutsi/wutsi.github.io/blob/master/design/kpi/Tracking%20File.md)
+- [Tracking File](Tracking-File.md)
