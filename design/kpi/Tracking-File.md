@@ -31,6 +31,7 @@ Here is the list of events:
 - **read-all**: User select button to read articles in all languages
 - **login**: User logged in
 - **g_one_tap_show**: Google One-Tap popup opened
+- **pwainstalled**: User has installed the PWA version of the application
 
 # Traffic
 The Traffic indicate from where the user if comming from
@@ -38,4 +39,4 @@ The Traffic indicate from where the user if comming from
 - **social_media**: User is coming from social media, by clicking a link of an article showing on Social Media.
 - **email**: User coming from email, by clicking a link of an article contained in an email.
 - **seo**: User coming from Google/Bing etc.
-- **pwainstalled**: User has installed the PWA version of the application
+
