@@ -13,7 +13,7 @@ The operation supported by the API:
 
 
 ## Transfer
-### Request
+##### Request
 ```json
 {
    "meta": {
@@ -21,17 +21,17 @@ The operation supported by the API:
      "description": "This is the description"
    },
    "customer": {
-     "name": "Roger Milla"
+     "name": "Roger Milla",
      "number": "+2379999999"
    },
    "amount":{
-     "amount": 130000
+     "amount": 130000,
      "currency": "XAF"
    }
 }
 ```
 
-### Response
+##### Response
 ```
 {
    "transactionId": "4309430943",
