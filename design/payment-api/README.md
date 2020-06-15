@@ -6,13 +6,12 @@ The operation supported by the API:
 - Transfer: Transfer payment to a customer
 - Transfer Status: Return the status of a transaction
 
-
+---------------
 ## Verify
 This command verify the status of a customer, ensure that its phone number is valid.
 ```
 POST /v1/payment/verify
 ```
-
 
 ##### Request
 | Name              | Required | Description |
@@ -31,13 +30,14 @@ POST /v1/payment/verify
 }
 ```
 
-##### Response
+##### Response Status Code
 | Status Code | Error Code | Description |
 |-------------|------------|-------------|
 | 200         |            | The customer is valid |
 | 404         | customer_not_found | Customer not found |
 
 
+---------------
 ## Transfer
 This is the command for transfering fund to a given customer.
 
@@ -60,7 +60,7 @@ POST /v1/payment/transfer
 ```json
 {
    "meta": {
-     "invoiceId": "1234",
+     "transactionId": "1234",
      "description": "..."
    },
    "customer": {
@@ -75,15 +75,17 @@ POST /v1/payment/transfer
 }
 ```
 
-##### Response
+##### Response Status Code
 | Status Code | Error Code  | Description |
 |-------------|-------------|-------------|
 | 202         |             | Accepted. The Transaction is been processed |
 | 400         | bad_request | |
 | 409         | duplicate_transaction | There is already a transaction with that ID |
 | 409         | invalid_currency | The currency is not valid |
+| 500         |                  | Server error |
 
 
+---------------
 ## Transfer Status
 Return the status of a transfer
 
@@ -91,14 +93,31 @@ Return the status of a transfer
 GET /v1/payment/transfer/<transaction-id>
 ```
 
-##### Response Body
-```
-{
-   "transactionId": "1234",
-   "status": "approved"
-}
-```
+##### Response Status Code
+| Status Code | Error Code  | Description |
+|-------------|-------------|-------------|
+| 202         |             | Accepted. The Transaction is been processed |
+| 404         | transaction_not_found | `transaction-id` is not valid |
+| 500         |                       | Server error |
 
+##### Response Status Body
+| Name                 | Description |
+|----------------------|-------------|
+| transactionId        | ID of the transaction |
+| carrierTransactionId | Carrier Transaction ID |
+| amount.value         | Amount transfered |
+| amount.currency      | Amount ISO currency code |
+| customer.phone       | Mobile number in international format |
+| customer.carrier     | Mobile Phone carrier |
+| status               | Status of the transaction: `successful` or `failed` |
+| errorCode            | Error code |
+
+##### Transfer Error Codes
+- `insufisant_funds`: Not enough fund to complete the transactions
+- `limit_reached`: Limit of transaction reaches
+- `customer_not_found`: Invalid mobile number
+
+---------------
 ## Misc.
 ### Mobile Carriers
 The carrier supported are:
