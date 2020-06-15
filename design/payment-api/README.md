@@ -2,13 +2,13 @@
 This is a generic API for supporting online payment.
 The scope of this API is limitted (for the moment to Mobile payment).
 The operation supported by the API:
-- Verify: Verify the identify of a customer
-- Transfer: Transfer payment to a customer
-- Transfer Status: Return the status of a transaction
+- [Verify](https://github.com/wutsi/wutsi.github.io/blob/master/design/payment-api/README.md#verify)
+- [Transfer](https://github.com/wutsi/wutsi.github.io/blob/master/design/payment-api/README.md#transfer)
+- [Transfer Status](https://github.com/wutsi/wutsi.github.io/blob/master/design/payment-api/README.md#transfer-status)
 
 ---------------
 ## Verify
-This command verify the status of a customer, ensure that its phone number is valid.
+Verify a customer's phone number
 ```
 POST /v1/payment/verify
 ```
@@ -39,7 +39,7 @@ POST /v1/payment/verify
 
 ---------------
 ## Transfer
-This is the command for transfering fund to a given customer.
+Sends a request to transfer funds to a given customer.
 
 ```
 POST /v1/payment/transfer
@@ -87,7 +87,7 @@ POST /v1/payment/transfer
 
 ---------------
 ## Transfer Status
-Return the status of a transfer
+Request the status of a transfer
 
 ```
 GET /v1/payment/transfer/<transaction-id>
@@ -113,9 +113,9 @@ GET /v1/payment/transfer/<transaction-id>
 | errorCode            | Error code |
 
 ##### Transfer Error Codes
-- `insufisant_funds`: Not enough fund to complete the transactions
-- `limit_reached`: Limit of transaction reaches
-- `customer_not_found`: Invalid mobile number
+- `insufisant_funds`: Not enough fund to complete the transactions.
+- `limit_reached`: Limit of transaction reached.
+- `customer_not_found`: Invalid mobile number.
 
 ---------------
 ## Misc.
