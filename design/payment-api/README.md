@@ -2,47 +2,82 @@
 This is a generic API for supporting online payment.
 The scope of this API is limitted (for the moment to Mobile payment).
 The operation supported by the API:
-- Pay: Receive payment from customer
 - Transfert: Transfer payment to a customer
-- Cancel: Cancel a transaction
 - Status: Return the status of a transaction
 - Verify: Verify the identify of a customer
 
+
 ## API Operations
-## Pay
+## Verify
+This command verify the status of a customer. Its can be used to validate a phone number.
+```
+POST /v1/payment/verify
 
-
-## Transfer
-##### Request
+```
+##### Request Body
 ```json
 {
-   "meta": {
-     "orderId": "40490943",
-     "description": "This is the description"
-   },
    "customer": {
-     "name": "Roger Milla",
-     "number": "+2379999999"
-   },
-   "amount":{
-     "amount": 130000,
-     "currency": "XAF"
+     "name": "Roger Milla",      // Customer full name
+     "number": "+2379999999",    // Mobile number in internation format
+     "provider": "mtn"           // MTN, Orange
    }
 }
 ```
 
-##### Response
+##### Successfull Response
+Status Code: 200
+
+##### Error
+| Status Code | Error Code | Description |
+|-------------|------------|-------------|
+| 404         | customer_not_found | Customer not found |
+
+## Transfer
+This is the command for transfering fund to a given customer.
+
 ```
+POST /v1/payment/transfer
+```
+
+##### Request Body
+```json
 {
-   "transactionId": "4309430943",
-   "status": "approved"
+   "meta": {
+     "invoiceId": "1234",        // ID associated with this transaction
+     "description": "..."        // Description of the transaction
+   },
+   "customer": {
+     "name": "Roger Milla",      // Customer full name
+     "number": "+2379999999",    // Mobile number in internation format
+     "provider": "mtn"           // MTN, Orange
+   },
+   "amount":{
+     "amount": 130000,           // Transfer amount
+     "currency": "XAF"           // ISO currency code
+   }
 }
 ```
 
-## Cancel
+##### Response Body
+```
+{
+   "transactionId": "1234",       // Transaction unique ID
+   "status": "success"            // Status of the transaction: pending|failed
+}
+```
 
 ## Status
+```
+GET /v1/payment/transfer/<transaction-id>
+```
 
-## Verify
+##### Response Body
+```
+{
+   "transactionId": "1234",
+   "status": "approved"
+}
+```
 
 ## API Errors
