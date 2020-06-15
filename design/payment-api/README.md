@@ -16,11 +16,11 @@ POST /v1/payment/verify
 
 
 ##### Request
-| Name              | Required | Values     | Description |
-|-------------------|----------|------------|-------------|
-| customer.name     | N        |            | Full name of the customer |
-| customer.phone    | Y        |            | Customer phone number in international format |
-| customer.provider | Y        | mtn,orange | Phone carrier |
+| Name              | Required | Description |
+|-------------------|----------|-------------|
+| customer.name     | N        | Full name of the customer |
+| customer.phone    | Y        | Mobile number in international format |
+| customer.provider | Y        | Phone carrier |
 
 ```json
 {
@@ -88,4 +88,6 @@ GET /v1/payment/transfer/<transaction-id>
 }
 ```
 
-## API Errors
+## Carrier
+The carrier supported are:
+- `mtn`: MTN Mobile Money
