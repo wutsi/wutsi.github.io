@@ -9,18 +9,25 @@ The operation supported by the API:
 
 ## API Operations
 ## Verify
-This command verify the status of a customer. Its can be used to validate a phone number.
+This command verify the status of a customer, ensure that its phone number is valid.
 ```
 POST /v1/payment/verify
-
 ```
-##### Request Body
+
+
+##### Request
+| Name              | Required | Values     | Description |
+|-------------------|----------|------------|-------------|
+| customer.name     | N        |            | Full name of the customer |
+| customer.phone    | Y        |            | Customer phone number in international format |
+| customer.provider | Y        | mtn,orange | Phone carrier |
+
 ```json
 {
    "customer": {
-     "name": "Roger Milla",      // Customer full name
-     "number": "+2379999999",    // Mobile number in internation format
-     "provider": "mtn"           // MTN, Orange
+     "name": "Roger Milla",
+     "phone": "+2379999999",
+     "carrier": "mtn"
    }
 }
 ```
@@ -32,6 +39,7 @@ Status Code: 200
 | Status Code | Error Code | Description |
 |-------------|------------|-------------|
 | 404         | customer_not_found | Customer not found |
+
 
 ## Transfer
 This is the command for transfering fund to a given customer.
