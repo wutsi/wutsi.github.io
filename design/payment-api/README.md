@@ -26,6 +26,7 @@ POST /v1/payment/verify
 |-------------|------------|-------------|
 | 200         |            | The customer is valid |
 | 404         | customer_not_found | Customer not found |
+| 404         | invalid_carrier    | Carrier not supported |
 
 
 ---------------
@@ -52,10 +53,10 @@ POST /v1/payment/transfer
 | Status Code | Error Code  | Description |
 |-------------|-------------|-------------|
 | 202         |             | Accepted. The Transaction is been processed |
-| 400         | bad_request | |
+| 400         | bad_request |   |
 | 409         | duplicate_transaction | There is already a transaction with that ID |
-| 409         | invalid_currency | The currency is not valid |
-| 500         |                  | Server error |
+| 409         | invalid_currency      | The currency is not valid |
+| 409         | invalid_carrier       | Carrier not supported |
 
 
 ---------------
@@ -76,9 +77,9 @@ POST /v1/payment/transfer/status
 ##### Response Status Code
 | Status Code | Error Code  | Description |
 |-------------|-------------|-------------|
-| 202         |             | Accepted. The Transaction is been processed |
-| 404         | transaction_not_found | `transaction-id` is not valid |
-| 500         |                       | Server error |
+| 200         |             | Success |
+| 404         | transaction_not_found | transactionId is not valid |
+| 404         | invalid_carrier       | Carrier not supported |
 
 ##### Response Status Body
 | Name                 | Description |
