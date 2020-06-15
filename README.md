@@ -1,11 +1,7 @@
 # wutsi.github.io
 
-
-- Authentications
-  - Google
-  - Facebook
-  - Github
-  
+- [Payment API](design/payment-api)
+  - [MoMo Integration](design/payment-api/MTN-MoMo-Integration)
 - Integrations
   - [ImageKit.io](design/integration/imagekit.io)
   - AWS S3
