@@ -16,19 +16,10 @@ POST /v1/payment/verify
 ##### Request
 | Name              | Required | Description |
 |-------------------|----------|-------------|
-| customer.name     | N        | Full name of the customer |
-| customer.phone    | Y        | Mobile number in international format |
-| customer.carrier  | Y        | Mobile Phone carrier |
+| customer          | N        | Full name of the customer |
+| mobileNumber      | Y        | Mobile number in international format |
+| carrier           | Y        | Mobile Phone carrier |
 
-```json
-{
-   "customer": {
-     "name": "Roger Milla",
-     "phone": "+2379999999",
-     "carrier": "mtn"
-   }
-}
-```
 
 ##### Response Status Code
 | Status Code | Error Code | Description |
@@ -45,35 +36,17 @@ Sends a request to transfer funds to a given customer.
 POST /v1/payment/transfer
 ```
 
-##### Request Body
+##### Request
 | Name              | Required | Description |
 |-------------------|----------|-------------|
-| customer.name     | N        | Full name of the customer |
-| customer.phone    | Y        | Mobile number in international format |
-| customer.carrier  | Y        | Mobile Phone carrier |
-| amount.value      | Y        | Amount value |
-| amount.currency   | Y        | Amount ISO currency code |
-| meta.description  | N        | Description of the transaction |
-| meta.transactionId| Y        | Globally unique ID of the transaction. Use GUID for this |
+| transactionId     | Y        | Globally unique ID of the transaction. Use GUID for this |
+| customer          | Y        | Full name of the customer |
+| mobileNumber      | Y        | Mobile number in international format |
+| carrier           | Y        | Mobile Phone carrier |
+| amount            | Y        | Amount to transfer |
+| currency          | Y        | ISO currency code |
+| description       | N        | Description of the transaction |
 
-
-```json
-{
-   "meta": {
-     "transactionId": "1234",
-     "description": "..."
-   },
-   "customer": {
-     "name": "Roger Milla",
-     "number": "+2379999999",
-     "carrier": "mtn"
-   },
-   "amount":{
-     "value": 130000,
-     "currency": "XAF"
-   }
-}
-```
 
 ##### Response Status Code
 | Status Code | Error Code  | Description |
@@ -90,8 +63,15 @@ POST /v1/payment/transfer
 Request the status of a transfer
 
 ```
-GET /v1/payment/transfer/<transaction-id>
+POST /v1/payment/transfer/status
 ```
+
+##### Request
+| Name              | Required | Description |
+|-------------------|----------|-------------|
+| transactionId     | Y        | ID of the transaction |
+| carrier           | Y        | Phone carrier |
+
 
 ##### Response Status Code
 | Status Code | Error Code  | Description |
@@ -103,12 +83,13 @@ GET /v1/payment/transfer/<transaction-id>
 ##### Response Status Body
 | Name                 | Description |
 |----------------------|-------------|
-| transactionId        | ID of the transaction |
-| carrierTransactionId | Carrier Transaction ID |
-| amount.value         | Amount transfered |
-| amount.currency      | Amount ISO currency code |
-| customer.phone       | Mobile number in international format |
-| customer.carrier     | Mobile Phone carrier |
+| transactionId        | Globally unique ID of the transaction. Use GUID for this |
+| carrierTransactionId | Carrier reference ID |
+| customer             | Full name of the customer |
+| mobileNumber         | Mobile number in international format |
+| carrier              | Mobile Phone carrier |
+| amount               | Amount to transfer |
+| currency             | ISO currency code |
 | status               | Status of the transaction: `successful` or `failed` |
 | errorCode            | Error code |
 
