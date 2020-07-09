@@ -10,7 +10,7 @@ The operation supported by the API:
 ## Verify
 Verify a customer's phone number
 ```
-POST /v1/payment/verify
+fun verify(request: VerifyRequest): VerifyResponse
 ```
 
 ##### Request
@@ -34,7 +34,7 @@ POST /v1/payment/verify
 Sends a request to transfer funds to a given customer.
 
 ```
-POST /v1/payment/transfer
+fun verify(request: TransferRequest): TransferResponse
 ```
 
 ##### Request
@@ -64,7 +64,7 @@ POST /v1/payment/transfer
 Request the status of a transfer
 
 ```
-POST /v1/payment/transfer/status
+fun status(request: StatusRequest): StatusResponse
 ```
 
 ##### Request
