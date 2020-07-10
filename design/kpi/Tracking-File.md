@@ -32,7 +32,6 @@ Here is the list of events:
 - **login**: User logged in.
 - **g_one_tap_show**: Google One-Tap popup opened.
 - **pwainstalled**: User has installed the PWA version of the application.
-- **wpp_read_ratio**: Monthly read percentage, per user or per story.
 
 # Traffic
 The Traffic indicate from where the user if comming from
