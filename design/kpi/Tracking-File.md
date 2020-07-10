@@ -28,10 +28,11 @@ Here is the list of events:
 - **scroll**: User scrolls up/down when reading an article.
 - **xread**: User clicks on article recommendation after reading an article.
 - **share**: User shares and article on social media.
-- **read-all**: User select button to read articles in all languages
-- **login**: User logged in
-- **g_one_tap_show**: Google One-Tap popup opened
-- **pwainstalled**: User has installed the PWA version of the application
+- **read-all**: User select button to read articles in all languages.
+- **login**: User logged in.
+- **g_one_tap_show**: Google One-Tap popup opened.
+- **pwainstalled**: User has installed the PWA version of the application.
+- **wpp_read_ratio**: Monthly read percentage, per user or per story.
 
 # Traffic
 The Traffic indicate from where the user if comming from
