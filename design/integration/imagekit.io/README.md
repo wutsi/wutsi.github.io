@@ -8,7 +8,7 @@ Wutsi is integrated with [imagekit.io](https://imagekit.io) for optimizing image
 The process for rendering Stories
 - Get the story content from backend. The content is in the EJS format (json based)
 - Convert the content in HTML format
-- Apply the [ImageKitFilter](https://github.com/WutsiTeam/wutsi-blog-web/blob/master/src/main/kotlin/com/wutsi/blog/app/service/editorjs/ImageKitFilter.kt) to the document to rewrite all the image `src` and `srcset` attributes.
+- Apply the [ImageKitFilter](https://github.com/WutsiTeam/wutsi-blog-web/blob/master/src/main/kotlin/com/wutsi/blog/app/page/editor/service/ImageKitFilter.kt) to the HTML document to optimize all the image size.
 
 ## Configuration
 Configuration File: [application.yml](https://github.com/WutsiTeam/wutsi-blog-web/blob/master/src/main/resources/application.yml)
@@ -18,7 +18,9 @@ Configuration Settings:
 - `wutsi.image-kit.endpoint-url`: ImageKit.io base URL
 
 #### Example
-- If `wutsi.image-kit.origin-url=https://s3.amazonaws.com/int-wutsi`, and `wutsi.image-kit.origin-url=https://ik.imagekit.io/cx8qxsgz4d/`
+- If 
+  - `wutsi.image-kit.origin-url=https://s3.amazonaws.com/int-wutsi` 
+  - `wutsi.image-kit.origin-url=https://ik.imagekit.io/cx8qxsgz4d/`
 - Then the URL `https://s3.amazonaws.com/int-wutsi/1/3/foo.png` will be rewritten to  `https://ik.imagekit.io/cx8qxsgz4d/1/3/foo.png`
 
 ## Accounts
