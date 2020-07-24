@@ -11,7 +11,7 @@ The process for rendering Stories
 - Apply the [ImageKitFilter](https://github.com/WutsiTeam/wutsi-blog-web/blob/master/src/main/kotlin/com/wutsi/blog/app/service/editorjs/ImageKitFilter.kt) to the document to rewrite all the image `src` and `srcset` attributes.
 
 ## Configuration
-Configuration File: [application.yml](https://github.com/WutsiTeam/wutsi-blog-service/blob/master/src/main/resources/application.yml)
+Configuration File: [application.yml](https://github.com/WutsiTeam/wutsi-blog-web/blob/master/src/main/resources/application.yml)
 Configuration Settings:
 - `wutsi.toggles.image-kit`: Feature flag to turn on/off the integration with imagekit.io
 - `wutsi.image-kit.origin-url`: Base URL served by imagekit.io
