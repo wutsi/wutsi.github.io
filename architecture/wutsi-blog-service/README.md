@@ -36,3 +36,6 @@ node PaymentGateway {
 
 @enduml
 ```
+
+# Designs
+- [Publish to Channel](publish-to-channel.md)
