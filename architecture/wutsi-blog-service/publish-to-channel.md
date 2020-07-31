@@ -23,3 +23,28 @@ loop foreach channel
 end loop
 @enduml
 ```
+
+## Class Diagram
+![](https://www.planttext.com/api/plantuml/img/ZP512i8m44NtSufPLY4NA2A5eYi5eLuWhICDreaaqugeTxTjkh9PT1K-lFSdoMHUj9FstW20OI5trHLXNcjcQavjsHXVati3uYE4n8jrhnIBuLZ1Dw8TZ1VYO5cUIXBgY2N5AUw6DEf_4YgrdSqlIABSU8c2N6SgWeY4cuzIixOekLu2XhxpqqZ_v8Nqll-PqjhRKZm_paY0ZFZIB-a7)
+
+```plantuml
+@startuml
+
+interface ChannelPublisher{
+  publish(story: Story)
+}
+
+interface ChannelListener{
+  onPublish(event: PublishEvent)
+}
+
+ChannelListener --> ChannelPublisherSet
+ChannelListener --> StoryService
+ChannelPublisherSet <|-- ChannelPublisher
+ChannelPublisherSet *-- ChannelPublisher
+ChannelPublisher <|-- TwitterChannelPublisher
+ChannelPublisher <|-- FacebookChannelPublisher
+ChannelPublisher <|-- FCMChannelPublisher
+
+@enduml
+```
