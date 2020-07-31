@@ -1,5 +1,5 @@
 # wutsi.github.io
-
+- [Architecture](architecture)
 - [Payment API](design/payment-api)
   - [MoMo Integration](design/payment-api/MTN-MoMo-Integration.md)
 - Integrations
