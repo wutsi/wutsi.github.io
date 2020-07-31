@@ -1,21 +1,33 @@
-# Components
+# High Level Architecture
 
-![](https://www.planttext.com/api/plantuml/img/VP512u8m5CVl-nJ3-qxTGx6KY2uPT8WTtdJ8S7EXCw7mkxVfa0fjfyT-l_Tdxori3JIcKnAXE-GLb1m7aOAdhd5qpGByGjYUMxQXljXdKrM00GQjrS-xsRD2tvbMJCg0Xe_KLEjISXnBtHLpRXAVV72gG4ZgEX0Qhp4XMnz7cDGbwJcZ67bnaThENzzP2UISQLtH1UpuGTa77eLPusxuBzJovY5oxl4umpfstN-es-SwzjjS5Yo_zC8Otb2tDHJokh0_-GO0)
+![](https://www.planttext.com/api/plantuml/img/TL0n3eCm3DpzYdmWNwYe6Agg8mD3nH285I85Ho9E6Qh-lK592nAj9z_vxBDT1LOpnya107cDeeqSh7Y2I75VLY1xvurSiE_4WGquF-o07RnA-xbjIX9vH68xABQUcgmBkNRntZYidOyw4zT96RnPpgWU5H6wa5RQAOMKfx8T99SDGYPN_CTq4tn7VnntO-1mRYhzF1Og99r-zWO0)
 
 ```plantuml
 @startuml
 
-Actor Bob
+node Wutsi {
+    [wutsi-blog-web] 
+    [wutsi-blog-service]
+}
 
-[Firebase] --> [wutsi-blog-web] 
-[Google] <--> [wutsi-blog-web]
-[Facebook] <--> [wutsi-blog-web]
-[Twitter] <--> [wutsi-blog-web]
+node AWS
+node AuthenticationServices
+node GoogleCloud
+node ImageKit
+node Channels
 
-Bob -> [wutsi-blog-web]
+
+GoogleCloud --> Wutsi 
+AWS --> Wutsi
+Wutsi --> AuthenticationServices
+Wutsi --> Channels
+ImageKit --> Wutsi
+
 [wutsi-blog-web] -> [wutsi-blog-service]
-[wutsi-blog-web] --> [ImageKit]
-[wutsi-blog-web] --> [Amazon S3]
 
 @enduml
 ```
+
+# Components
+- [wutsi-blog-web](wutsi-blog-web.md)
+- [wutsi-blog-service](wutsi-blog-service.md)
