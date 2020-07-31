@@ -1,0 +1,34 @@
+@startuml
+
+package "Amazon AWS" {
+    [S3]
+    [SES]
+    database "RDS" {
+      [wutsi]
+    }
+}
+
+package "Google Cloud" {
+    [FCM]
+    [Gmail]
+}
+
+
+
+[FCM] --> [wutsi-blog-web] 
+[Gmail] --> [wutsi-blog-web]
+
+[wutsi-blog-web] -> [Facebook]
+[wutsi-blog-web] --> [ImageKit]
+[wutsi-blog-web] --> [S3]
+
+[wutsi-blog-service] --> [FCM]
+[wutsi-blog-service] --> [S3]
+[wutsi-blog-service] --> [SES]
+[wutsi-blog-service] --> [wutsi]
+[wutsi-blog-service] -> [Twitter]
+
+
+
+
+@enduml
