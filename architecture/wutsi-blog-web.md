@@ -1,5 +1,5 @@
 # wutsi-blog-web
-![](https://www.planttext.com/api/plantuml/img/TP4z2y8m48Rt-nM7UoPN4Jz04N5oS90EINh4O9k39bLG_E-chQrIssntx_FULnO-o2AKUGQmr84BNB42nodXgGpUuXCmllEz2eJAs8WxgGJ_ifwAczMKm0iQ-sIPomSxN6TSffEspd7wIvJXGYvOBOEDvB4fuJjuosooMB8EDbAJOhx--1kzrs5Z2rBIVz9u8E-biSxKFXYNKOZvm9xj43WRqk4xrWW0yPuuwEotwa7TGV_1Yjpbqj3UXZ6zEZGioANnQzy0)
+![](https://www.planttext.com/api/plantuml/img/RP6n3eCW48RtUmfUmAcxqJQnQPfE3WwD0-25aYAN0DQXwRiNQwmcmdO_z_tyTnG-S1U6tW10AGCvTYG1bZfapH2yPczWyTp7gSY48PMDA5gsKpswbvROmWTcl6pg1QuF6ta83xH1InuqsNgc_D9v9b8ccloAYaiKHCyLdgzFXePk8IhjK72FR5Plw3rNsgeLklHSuLM7EE6Mpx8yCTPEcThIcG7YgbZ29M6IftULVEsVDvsbgG4Aj5tyioy0)
 
 ```plantuml
 @startuml
@@ -10,28 +10,29 @@ node Wutsi {
     [wutsi-blog-service]
 }
 
-node "Amazon Cloud" {
+node AWS {
     [S3]
 }
 
-node "Authentication Services" {
+node AuthenticationServices {
     [Google]
     [Facebook]
 }
 
-node "Google Cloud" {
+node GoogleCloud {
     [Firebase Cloud Messaging]
 }
 
+node ImageKit
 
-[Firebase Cloud Messaging] --> [wutsi-blog-web] 
-[Google] <--> [wutsi-blog-web]
-[Facebook] <--> [wutsi-blog-web]
+
+GoogleCloud --> [wutsi-blog-web] 
+[wutsi-blog-web] --> AuthenticationServices
 
 Bob -> [wutsi-blog-web]
 [wutsi-blog-web] -> [wutsi-blog-service]
-[wutsi-blog-web] --> [ImageKit]
-[wutsi-blog-web] --> [S3]
+[wutsi-blog-web] --> ImageKit
+[wutsi-blog-web] --> AWS
 
 @enduml
 ```
