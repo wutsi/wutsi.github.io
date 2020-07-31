@@ -1,20 +1,37 @@
 # wutsi-blog-web
-![](https://www.planttext.com/api/plantuml/img/TP2n2i8m48RtUufxWKok8gs38ewwXGv9F48mwK5oRS6dDpgMvDRl--7ZXY8cov8YmEY4CvxP0kXBo6HDeGcLEg7U5Yb1sSXURMGd17rbzh7YOulNlN5acTzTuRa54Sez3ZK3cyDzoaugbDVWg2N-p5iodkv1UdnCviCpFWuruNy3pQ_wdIy0)
+![](https://www.planttext.com/api/plantuml/img/TP4z2y8m48Rt-nM7UoPN4Jz04N5oS90EINh4O9k39bLG_E-chQrIssntx_FULnO-o2AKUGQmr84BNB42nodXgGpUuXCmllEz2eJAs8WxgGJ_ifwAczMKm0iQ-sIPomSxN6TSffEspd7wIvJXGYvOBOEDvB4fuJjuosooMB8EDbAJOhx--1kzrs5Z2rBIVz9u8E-biSxKFXYNKOZvm9xj43WRqk4xrWW0yPuuwEotwa7TGV_1Yjpbqj3UXZ6zEZGioANnQzy0)
 
 ```plantuml
 @startuml
 
 Actor Bob
+node Wutsi {
+    [wutsi-blog-web] 
+    [wutsi-blog-service]
+}
 
-[Firebase] --> [wutsi-blog-web] 
+node "Amazon Cloud" {
+    [S3]
+}
+
+node "Authentication Services" {
+    [Google]
+    [Facebook]
+}
+
+node "Google Cloud" {
+    [Firebase Cloud Messaging]
+}
+
+
+[Firebase Cloud Messaging] --> [wutsi-blog-web] 
 [Google] <--> [wutsi-blog-web]
 [Facebook] <--> [wutsi-blog-web]
-[Twitter] <--> [wutsi-blog-web]
 
 Bob -> [wutsi-blog-web]
 [wutsi-blog-web] -> [wutsi-blog-service]
 [wutsi-blog-web] --> [ImageKit]
-[wutsi-blog-web] --> [Amazon S3]
+[wutsi-blog-web] --> [S3]
 
 @enduml
 ```
