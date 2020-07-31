@@ -29,5 +29,5 @@ ImageKit --> Wutsi
 ```
 
 # Components
-- [wutsi-blog-web](wutsi-blog-web.md)
-- [wutsi-blog-service](wutsi-blog-service.md)
+- [wutsi-blog-web](wutsi-blog-web)
+- [wutsi-blog-service](wutsi-blog-service)
