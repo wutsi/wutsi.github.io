@@ -25,7 +25,7 @@ end loop
 @enduml
 ```
 
-## Class Diagram
+## Firebase Channel Class Diagram
 ![](https://www.planttext.com/api/plantuml/img/ZP512i8m44NtSufPLY4NA2A5eYi5eLuWhICDreaaqugeTxTjkh9PT1K-lFSdoMHUj9FstW20OI5trHLXNcjcQavjsHXVati3uYE4n8jrhnIBuLZ1Dw8TZ1VYO5cUIXBgY2N5AUw6DEf_4YgrdSqlIABSU8c2N6SgWeY4cuzIixOekLu2XhxpqqZ_v8Nqll-PqjhRKZm_paY0ZFZIB-a7)
 
 ```plantuml
