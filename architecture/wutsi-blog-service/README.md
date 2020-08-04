@@ -39,3 +39,4 @@ node PaymentGateway {
 
 # Designs
 - [Publish to Channel](publish-to-channel.md)
+- [Like](like.md)
