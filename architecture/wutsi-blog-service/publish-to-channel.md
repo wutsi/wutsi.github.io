@@ -2,9 +2,9 @@
 When authors publish stories, the story is published to website so that reader can start reading.
 In parallel, the stories are publish to other channels to reach other users.
 The channel supported by Wutsi
- - [Twitter](https://github.com/WutsiTeam/wutsi-blog-service/blob/master/src/main/kotlin/com/wutsi/blog/channel/service/twitter/TwitterChannelPublisher.kt)
- - [Facebook](https://github.com/WutsiTeam/wutsi-blog-service/blob/master/src/main/kotlin/com/wutsi/blog/channel/service/facebook/FacebookChannelPublisher.kt)
-
+ - Twitter
+ - Facebook
+  - [Firebase](publish-to-channel-firebase.md)
 
 ## Sequence Diagram
 ![](https://www.planttext.com/api/plantuml/img/TP512i8m44NtSufPsaKfRekKId4dADGBr3ZIG4ngCYruUvCssA9rauIVUOyVKZfkBFSF1R0NR2nMIf9cW6d7D2smzlchCfgjKOfiZkTJVS5is6Okt6GxUIkohhygwLgqzEp9CNn1iwWcEqX1EKPY4uba5TbtdPAYOMdqOV25pXCKMaH-Z3SKLjziaINm5nxLLTjeJUee7PCEGgFZm6HBu6jYINrKDV7ybCWfOpgy6qkDQ55C0E0QkghyyP6-ON12wK_-hzu0)
