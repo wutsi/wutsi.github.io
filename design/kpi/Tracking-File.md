@@ -31,7 +31,10 @@ Here is the list of events:
 - **read-all**: User select button to read articles in all languages.
 - **login**: User logged in.
 - **g_one_tap_show**: Google One-Tap popup opened.
-- **pwainstalled**: User has installed the PWA version of the application.
+- **pwa_a2hs_show**: The `Add To Homescreen` panel has been displayed
+- **pwa_a2hs_install**: User has installed the PWA version of the application.
+- **pwa_push_show**: The push notification panel has been displayed
+- **pwa_a2hs_install**: User has enabled push notification
 
 # Traffic
 The Traffic indicate from where the user if comming from
