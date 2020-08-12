@@ -41,3 +41,4 @@ node PaymentGateway {
 - [Publish to Channel](publish-to-channel.md)
 - [Like](like.md)
 - [User Tracking](user-tracking.md)
+- [Statistics](statistics.md)
