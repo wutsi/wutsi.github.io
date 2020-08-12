@@ -50,7 +50,7 @@ end alt
 - **ip**: IP of the device that fired the event
 - **long**: Longitude  where the event was fired
 - **lat**: Latitude where the event was fired
-- **traffic**: Source of the traffic. See details [here](https://github.com/wutsi/wutsi.github.io/blob/master/design/kpi/Tracking%20File.md#traffic)
+- **traffic**: Source of the traffic.
 - **referer**: URL of the referer page
 - **bot**: `true` if this event was fired by a bot
 - **ua**: User Agent
