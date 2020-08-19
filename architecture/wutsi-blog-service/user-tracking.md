@@ -3,7 +3,7 @@ Those files are later analyse for extracting valuable statistics.
 
 # Sequence Diagram
 
-![](https://www.planttext.com/api/plantuml/img/VL6vRiCm3Dtv5HoTmGYwUWWI19rhm45tLILWeOgaK9Jx-z4HE6bJT1Br-0uIt4THBEbi0GvQFEFH6d82q5xi-nsUMEcletV2tbhY0SUtwOJRvMKhfODCbqHHu1Vlhfs85wDfm93YtDte6tZi_K7MJ4geOlzeHXF86bVCsMkAiQj3RG2izm59wHcZK01SgLKtPUn9G-uJYmoWjEypZSJHP9UyUsZbcgAieD8wdPFDqwB3seWvxgVo5kgPrWLZ-NKjDTiqhyNGTqzBkG7YqxQ74ApHIenthuKpfWzhubm7QsM5ksemu7isgy132EnpcGz-1G00)
+![](https://www.planttext.com/api/plantuml/img/VL4x3i8m3Drz2ezbG8YL0O4u09NA1Q9WYOYG1DlX_2HjrV8JKno_dotlH0rhldc0lTN8UF2EWW8CBowNMponiTT33ChHU-8DjiVkXAl7UgKLGQPx9b7uuCtQZlZXB6qmPRaq8tq1hzWFicKoIdtlZwPrYRmBrPoZ9P6c7se1u6DCICPUK9GIu4JjTLtfVMaedB7A02eypzGIYoikPVSqb5EAyOh6sdpBlaoB0Nj0IjoxSWoDJDE2Kd_Da5fi07QbAgTu0W00)
 
 ```plantuml
 @startuml
@@ -23,10 +23,6 @@ Step --> TrackPersister: persist(track)
 
 alt accumulate n tracks
   TrackPersister --> StoreService: store()
-end alt
-
-alt if view-event
-  TrackService --> ApplicationEventPublisher: publishEvent(event: ViewEvent)
 end alt
 
 @enduml
