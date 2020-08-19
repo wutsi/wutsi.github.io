@@ -1,5 +1,26 @@
-The Tracking API is used to collecting all users events and store them into CSV files.
-Those files are later analyse for extracting valuable statistics.
+The Track service is handling all user tracking events.
+
+![](https://www.planttext.com/api/plantuml/img/SoWkIImgAStDuUBAoqz9LGWlBIdELAZcKW22w78GHpSf9pzTjpmrALO1MRIaA34vMxSujQWiCparbgiMgjynDx4gFyynF1XcHh0nM98Bmp1TEnn6OHLLq0Mf1nd6nUMGcfS2T340)
+
+```plantuml
+@startuml
+
+node Wutsi {
+    [wutsi-blog-web] 
+    [wutsi-track-service]
+}
+
+node AmazonAWS {
+    [S3]
+}
+
+
+[wutsi-blog-web] -> [wutsi-track-service]
+[wutsi-track-service] --> [S3]
+
+
+@enduml
+```
 
 # Sequence Diagram
 
