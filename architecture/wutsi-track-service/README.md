@@ -24,11 +24,10 @@ node AmazonAWS {
 
 # Sequence Diagram
 
-![](https://www.planttext.com/api/plantuml/img/VL4x3i8m3Drz2ezbG8YL0O4u09NA1Q9WYOYG1DlX_2HjrV8JKno_dotlH0rhldc0lTN8UF2EWW8CBowNMponiTT33ChHU-8DjiVkXAl7UgKLGQPx9b7uuCtQZlZXB6qmPRaq8tq1hzWFicKoIdtlZwPrYRmBrPoZ9P6c7se1u6DCICPUK9GIu4JjTLtfVMaedB7A02eypzGIYoikPVSqb5EAyOh6sdpBlaoB0Nj0IjoxSWoDJDE2Kd_Da5fi07QbAgTu0W00)
+![](http://www.plantuml.com/plantuml/png/fL4zRp8n3DxzApmU0qBlol0AX3htf4FTq-3gefeajHtwzqjoYAkkg4kdE7u-7YVUgJcnScROUqk21muK3M0wSRt-ZqTn_lsGeabY9jbY_pmSSNFvjx6AeD178JLOy6RjG789dhQOYuxTZRw2xzW3iXToHgttYwOFcJZ4QYx9ashNXbe1S4ePoVaHrIW3tgbDDrnxFpGKJrXb01MUP-f9DAYHN1LJUKznREYyB-V2pWWZDa015yfRQ1AwFr3hhPjI7Tla5TvGo9tQLf0kTHU8ZtvsdpC7xooa-5HfVNdbe6ERSIgxbq2V3PipRX4wEg6_sW_LPE4FksjLplm5)
 
 ```plantuml
 @startuml
-
 Actor Client
 
 Client --> TrackController: POST /v1/track request
@@ -44,6 +43,13 @@ Step --> TrackPersister: persist(track)
 
 alt accumulate n tracks
   TrackPersister --> StoreService: store()
+end alt
+
+alt if readstart event
+  TrackController --> ApplicationEventPublisher: publish(ViewEvent)
+end alt
+alt if share event
+  TrackController --> ApplicationEventPublisher: publish(ShareEvent)
 end alt
 
 @enduml
@@ -93,3 +99,6 @@ The Traffic indicate from where the user if comming from
 - **social_media**: User is coming from social media, by clicking a link of an article showing on Social Media.
 - **email**: User coming from email, by clicking a link of an article contained in an email.
 - **seo**: User coming from Google/Bing etc.
+
+# Links
+- [Statistics](statistics.md)
