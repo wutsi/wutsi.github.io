@@ -24,7 +24,7 @@ node AmazonAWS {
 
 # Sequence Diagram
 
-![](http://www.plantuml.com/plantuml/png/fL4zRp8n3DxzApmU0qBlol0AX3htf4FTq-3gefeajHtwzqjoYAkkg4kdE7u-7YVUgJcnScROUqk21muK3M0wSRt-ZqTn_lsGeabY9jbY_pmSSNFvjx6AeD178JLOy6RjG789dhQOYuxTZRw2xzW3iXToHgttYwOFcJZ4QYx9ashNXbe1S4ePoVaHrIW3tgbDDrnxFpGKJrXb01MUP-f9DAYHN1LJUKznREYyB-V2pWWZDa015yfRQ1AwFr3hhPjI7Tla5TvGo9tQLf0kTHU8ZtvsdpC7xooa-5HfVNdbe6ERSIgxbq2V3PipRX4wEg6_sW_LPE4FksjLplm5)
+![](http://www.plantuml.com/plantuml/png/hP4nJyCm48Lt_ueRqw6gM3kWLXKR4f5IiHltK2nSsvpFuU-JSwguQWDYO8fzzxvtz-9TOasSpqxj3GU2WxFeMQdf2-lr8nn9cuz3y4p1EQGjj2_T4JR3muQb0uIV6HEh6rrbEwJ16jn2pAblBlALkkujY0sXPYorNvZMHdJMYpa5WoarPQcLKYw42AXD3uanAfYbXUl6sXs3_WI2AINjkbEBb6nYoHwdupn5EmPjJ3vdfnd1Gsaa1JVaPMWWd0CckJNJrD5cyhBlGAXFvLK01taBWAK_ku_HMQFP1lyaiZQ_EPlwikDqR0g-VRNuLHGh1JzJC5gAybcszU8IlDoNJAgkSZML7l0EcZDU8gPU4_vFl4wi_fQlIAy3biAYpxMqiaiXArTJxiP3Fhjl)
 
 ```plantuml
 @startuml
@@ -46,12 +46,15 @@ alt accumulate n tracks
 end alt
 
 alt if readstart event
-  TrackController --> ApplicationEventPublisher: publish(ViewEvent)
+  TrackController --> ApplicationEventPublisher: publish(event:ViewEvent)
+  ApplicationEventPublisher -> ViewListener: onView(event:ViewEvent)
+  ViewListener -> ViewService: save(event:ViewEvent)
 end alt
 alt if share event
-  TrackController --> ApplicationEventPublisher: publish(ShareEvent)
+  TrackController --> ApplicationEventPublisher: publish(event:ShareEvent)
+  ApplicationEventPublisher -> ShareListener: onShare(event:ShareEvent)
+  ShareListener -> ShareService: save(event:ShareEvent)
 end alt
-
 @enduml
 ```
 
@@ -84,7 +87,10 @@ Here is the list of events:
 - **readend**: User stops reading an article. This event is fired when user leave the page `/read/...`.
 - **scroll**: User scrolls up/down when reading an article.
 - **xread**: User clicks on article recommendation after reading an article.
-- **share**: User shares and article on social media.
+- **share-facebook**: User shares and article on Facebook.
+- **share-messenger**: User shares and article on Messenger.
+- **share-twitter**: User shares and article on Twitter.
+- **share-whatsapp**: User shares and article on WhatsApp.
 - **read-all**: User select button to read articles in all languages.
 - **login**: User logged in.
 - **g_one_tap_show**: Google One-Tap popup opened.
