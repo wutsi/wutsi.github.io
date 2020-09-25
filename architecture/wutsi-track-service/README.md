@@ -80,6 +80,7 @@ end alt
 - **referer**: URL of the referer page
 - **bot**: `true` if this event was fired by a bot
 - **ua**: User Agent
+- **url**: URL where the event was sent
 
 # Events
 Here is the list of events:
